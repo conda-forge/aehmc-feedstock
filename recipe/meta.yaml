@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: aehmc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/aehmc/aehmc-{{ version }}.tar.gz
-  sha256: 1e3e648198baf4c610c09f77d91a3affbdb83cb1f212a6c327885cf4300b2ae2
+  sha256: a235271375a365f341c24e2ada9906979a05580f9b58da80623a139c928ff6e8
   patches:
 
 build:
