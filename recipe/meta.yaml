@@ -40,6 +40,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - maresb
     - brandonwillard
-    - twiecki
     - rlouf
+    - dgerlanc
