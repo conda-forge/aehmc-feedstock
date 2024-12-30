@@ -5,28 +5,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/aehmc/aehmc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/aehmc/aehmc-{{ version }}.tar.gz
   sha256: cd997a39feeadd0b79de32e60626bf192dc4cc17a99d1cd25a313e19a97f310a
   patches:
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.18.1
     - scipy >=1.4.0
     - aesara >=2.1.1
     - aeppl >=0.0.5
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - aehmc.hmc
     - aehmc.nuts
